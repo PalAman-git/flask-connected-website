@@ -1,0 +1,10 @@
+<div class='job' style="display:flex;justify-content:space-between;align-items:center">
+  <div>
+    <h3 style="font-size:1.4rem; color:rgb(50,50,50);">{{job['title']}}</h3>
+    <div><b>Location:</b> {{job['location']}}</div>
+    {% if 'salary' in job %}
+    <div><b>Salary:</b> {{job['salary']}}</div>
+    {% endif %}
+  </div>
+  <button style="padding:0.7rem 2rem;border:none;border-radius:0.2rem; background-color:black; color:white; cursor:pointer;">Apply</button>
+</div>

@@ -32,6 +32,7 @@
         color: rgb(50,50,50);
       }
       p{
+        
         margin:1rem 0rem;
       }
       #container{
@@ -40,6 +41,24 @@
         justify-content:center;
         align-items:center;
         flex-direction:column;
+      }
+      #contact{
+        padding: 0.5rem; 1rem;
+        background-color:rgb(65,105,225);
+        color:white;
+        border:none;
+        border-radius:0.2rem;
+        font-size:1rem;
+        margin:2rem 0rem;
+      }
+      .jobs{
+        text-align:left;
+        width:100%;
+      }
+      .job{
+        margin:1rem 0rem;
+        padding-bottom:1rem;
+        border-bottom:2px solid rgb(200,200,200);
       }
     </style>
   </head>
@@ -54,8 +73,11 @@
     </p>
 
     <h2>Open Positions</h2>
-    <p>TODO - Show the jobs here</p>
-    <button>Contact Us</button>
+    <div class="jobs">
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+      <button id="contact">Contact Us</button>
     </div>
   </body>
 </html>
